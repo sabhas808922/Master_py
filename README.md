@@ -1,79 +1,201 @@
-🚀 Month 1: Foundations & Core Machine Learning
-📅 Week 1: Python & Math Essentials
-🔹 Learn Python basics → Lists, Dictionaries, Loops, Functions
-🔹 NumPy & Pandas → Data manipulation, arrays, DataFrames
-🔹 Linear Algebra → Matrices, Vectors, Eigenvalues
-🔹 Probability & Statistics → Mean, Variance, Normal Distribution
-📌 Resources:
-Python Crash Course – freeCodeCamp
-Mathematics for ML – Khan Academy
-📅 Week 2: Machine Learning Basics
-🔹 Supervised vs. Unsupervised Learning
-🔹 Regression (Linear, Logistic)
-🔹 Classification (Decision Trees, SVM)
-🔹 Hands-on in Scikit-Learn
-💻 Mini-Projects:
-✅ House Price Prediction (Linear Regression)
-✅ Spam Email Classifier (Logistic Regression)
-📌 Course: Andrew Ng’s ML Course
-📅 Week 3: Advanced ML & Feature Engineering
-🔹 Decision Trees, Random Forests, Gradient Boosting
-🔹 Feature Selection & Dimensionality Reduction (PCA, LDA)
-🔹 Model Evaluation → Confusion Matrix, AUC-ROC
-🔹 Hyperparameter Tuning (Grid Search, Random Search)
-💻 Mini-Projects:
-✅ Customer Segmentation (K-Means Clustering)
-✅ Loan Approval Prediction (Classification)
-📌 Course: Hands-On ML with Scikit-Learn
-📅 Week 4: Deep Learning Basics
-🔹 Introduction to Neural Networks
-🔹 Backpropagation & Activation Functions
-🔹 TensorFlow & PyTorch Basics
-🔹 Training Neural Networks
-💻 Mini-Projects:
-✅ Handwritten Digit Recognition (MNIST)
-✅ AI Chatbot (NLP Basics)
-📌 Course: Deep Learning Specialization – Andrew Ng
-🚀 Month 2: Advanced AI, Specialization & Projects
-📅 Week 5: Deep Learning & Computer Vision
-🔹 Convolutional Neural Networks (CNNs)
-🔹 Image Classification & Object Detection
-🔹 Transfer Learning (ResNet, VGG, EfficientNet)
-💻 Projects:
-✅ Face Mask Detection
-✅ Traffic Sign Recognition
-📌 Course: CS231n – Stanford CV
-📅 Week 6: Natural Language Processing (NLP)
-🔹 Text Preprocessing (Tokenization, Stemming)
-🔹 Sentiment Analysis & Chatbots
-🔹 Transformers (BERT, GPT)
-💻 Projects:
-✅ Fake News Detection
-✅ AI-Powered Resume Screener
-📌 Course: Hugging Face NLP Course
-📅 Week 7: Reinforcement Learning & Generative AI
-🔹 Q-Learning & Deep Q Networks
-🔹 Generative Adversarial Networks (GANs)
-🔹 AI in Game Development
-💻 Projects:
-✅ AI Flappy Bird (RL)
-✅ AI-Generated Art (GANs)
-📌 Course: DeepMind RL Course
-📅 Week 8: Real-World Projects & Internship Prep
-🔹 Build an End-to-End ML Web App (Flask/Django + React)
-🔹 Deploy ML models (Streamlit, Flask, FastAPI)
-🔹 Apply to Internships (LinkedIn, GitHub, Internshala)
-🔹 Open-Source Contribution (TensorFlow, Scikit-Learn)
-💻 Final Project Ideas:
-✅ AI-based Medical Diagnosis
-✅ AI-Powered Recommendation System
-📌 Resources:
-Deploy ML Models – Streamlit
-ML Internships – GitHub
-📌 Weekly Study Plan (10-15 hours/week)
-✅ Mon-Fri:
-2 hours/day (1 hour theory, 1 hour coding)
-✅ Sat-Sun:
-4+ hours (Hands-on projects + Kaggle)
-✅ Daily Goal:
-Code at least 30 mins on Kaggle/Colab
+1️⃣ Lists in Python
+A list is an ordered, mutable (changeable) collection of elements. It can store multiple data types.
+
+🔹 Creating Lists
+python
+Copy
+Edit
+# Creating a list
+fruits = ["apple", "banana", "cherry", "mango"]
+
+# Mixed data types
+random_list = [10, "hello", 3.14, True]
+
+# Empty list
+empty_list = []
+🔹 Accessing List Elements
+python
+Copy
+Edit
+fruits = ["apple", "banana", "cherry"]
+
+print(fruits[0])  # Output: apple (first element)
+print(fruits[-1]) # Output: cherry (last element)
+🔹 Modifying Lists
+python
+Copy
+Edit
+fruits = ["apple", "banana", "cherry"]
+
+# Changing an element
+fruits[1] = "orange"
+print(fruits)  # Output: ['apple', 'orange', 'cherry']
+
+# Adding elements
+fruits.append("grapes")  # Adds to the end
+print(fruits)
+
+fruits.insert(1, "blueberry")  # Adds at index 1
+print(fruits)
+
+# Removing elements
+fruits.remove("apple")  # Removes by value
+print(fruits)
+
+deleted_item = fruits.pop(2)  # Removes item at index 2
+print(f"Removed: {deleted_item}")
+🔹 List Slicing
+python
+Copy
+Edit
+numbers = [0, 1, 2, 3, 4, 5, 6, 7]
+
+print(numbers[2:5])   # Output: [2, 3, 4] (index 2 to 4)
+print(numbers[:4])    # Output: [0, 1, 2, 3] (start to index 3)
+print(numbers[3:])    # Output: [3, 4, 5, 6, 7] (index 3 to end)
+print(numbers[::2])   # Output: [0, 2, 4, 6] (step of 2)
+2️⃣ Dictionaries in Python
+A dictionary is an unordered collection of key-value pairs.
+
+🔹 Creating a Dictionary
+python
+Copy
+Edit
+# Creating a dictionary
+student = {
+    "name": "John",
+    "age": 20,
+    "grade": "A",
+    "subjects": ["Math", "Science"]
+}
+
+# Accessing values
+print(student["name"])  # Output: John
+print(student.get("age"))  # Output: 20
+🔹 Modifying a Dictionary
+python
+Copy
+Edit
+student["age"] = 21  # Modifying an existing key
+student["city"] = "New York"  # Adding a new key
+print(student)
+🔹 Deleting a Key
+python
+Copy
+Edit
+del student["grade"]  # Removes 'grade' key
+print(student)
+
+removed_value = student.pop("age")  # Removes and returns the value
+print(f"Removed Age: {removed_value}")
+🔹 Looping Through a Dictionary
+python
+Copy
+Edit
+for key, value in student.items():
+    print(f"{key}: {value}")
+3️⃣ Loops in Python
+🔹 for Loop
+Used to iterate over sequences like lists, strings, and dictionaries.
+
+python
+Copy
+Edit
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(f"I like {fruit}")  
+Looping with range()
+
+python
+Copy
+Edit
+for i in range(5):  # Loops from 0 to 4
+    print(i)
+Looping Through a Dictionary
+
+python
+Copy
+Edit
+student = {"name": "John", "age": 20, "grade": "A"}
+
+for key, value in student.items():
+    print(f"{key}: {value}")
+🔹 while Loop
+Used when the number of iterations is unknown.
+
+python
+Copy
+Edit
+x = 0
+while x < 5:
+    print(f"x is {x}")
+    x += 1  # Incrementing x
+🔹 break and continue
+break: Stops the loop.
+
+continue: Skips the current iteration.
+
+python
+Copy
+Edit
+for num in range(10):
+    if num == 5:
+        break  # Stops when num is 5
+    print(num)
+
+for num in range(5):
+    if num == 2:
+        continue  # Skips 2
+    print(num)
+4️⃣ Functions in Python
+A function is a reusable block of code that performs a specific task.
+
+🔹 Defining and Calling Functions
+python
+Copy
+Edit
+def greet():
+    print("Hello, welcome!")
+
+greet()  # Calling the function
+🔹 Function with Parameters
+python
+Copy
+Edit
+def greet_user(name):
+    print(f"Hello, {name}!")
+
+greet_user("Alice")  # Output: Hello, Alice!
+🔹 Function with Return Value
+python
+Copy
+Edit
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # Output: 8
+🔹 Default Arguments
+python
+Copy
+Edit
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet()       # Output: Hello, Guest!
+greet("Alex") # Output: Hello, Alex!
+🔹 Lambda Functions (Anonymous Functions)
+python
+Copy
+Edit
+square = lambda x: x * x
+print(square(4))  # Output: 16
+
+add = lambda a, b: a + b
+print(add(3, 7))  # Output: 10
+🔥 Summary
+✅ Lists → Ordered, mutable collection. Supports indexing, slicing, modification.
+✅ Dictionaries → Unordered, key-value pairs. Fast lookups.
+✅ Loops → for and while loops for iteration. Use break & continue.
+✅ Functions → Code reusability, parameters, return values, default arguments, lambda functions.
